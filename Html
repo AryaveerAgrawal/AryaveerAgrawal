@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>VisionV-Soft</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Creative Landing Page" name="keywords">
+        <meta content="Creative Landing Page" name="description">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="150*150" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="img/favicon/site.webmanifest">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300|Oswald:400,500&display=swap" rel="stylesheet"> 
+
+        <!-- Libraries CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Main Stylesheet -->
+        <link href="class.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Header Start-->
+        <div class="header">
+            <div class="container">
+                <h4>Welcome to</h4>
+                <h1>VisionV-Soft<font color="black"></font></h1>
+                <p> We provide eye care solutions to a wide audience 
+                </p>
+                <div class="email-subscription">
+                    <input type="email" id="email-input" class="email-input" placeholder="Enter your email" required />
+                    <button id="submit-btn" class="subscribe-btn">Notify Me</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('submit-btn').addEventListener('click', () => {
+                const email = document.getElementById('email-input').value;
+        
+                if (email) {
+                    fetch('https://script.google.com/macros/s/AKfycbyrlx2kR_Dp50k_lzTvcvfr_m8xfm3hLt72rKv3BCLnr9ahZ98P_pAntKVLtNzu83-u/exec', { 
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        mode: 'no-cors', // Avoids CORS errors but limits response handling
+                        body: JSON.stringify({ email }),
+                    })
+                    .then(() => {
+                        alert("Thank you!");
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert("Something went wrong. Please try again.");
+                    });
+                } else {
+                    alert("Please enter a valid email address.");
+                }
+            });
+        </script>
+        
+        <!-- Header End-->
+
+        <!-- About Start-->
+        <div class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h4>Learn more</h4>
+                    <h2>About</h2>
+                    <p>
+                       We work on providing eye care solutions utilising AI/ML to provide advanced eye care solutions to our audience
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="img/about-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="about-content">
+                            <h2>Our Story</h2>
+                            <p>
+                               Team of passionate individuals who plan to change eye care industry
+                            </p>
+                            <a class="btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="img/about-goal.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="about-content">
+                            <h2>Our Goal</h2>
+                            <p>
+                              We want to create a big change by keeping a big vision
+                            </p>
+                            <a class="btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Service Start -->
+        <div class="service">
+            <div class="container">
+                <div class="section-header">
+                    <span class="glyphicon glyphicon-asterisk"></span>
+                    <h4>World class</h4>
+                    <h2>Services</h2>
+                    <p>
+                        We will provide special eye care services to prevent eye strain during work. We want you to work more efficiently but to do that you need to be heathy, especially your eyes!
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-desktop"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Eye strain reduction  </h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Eye Hydration level check</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-tablet-alt"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Eye exercise tool</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>App Version will be launched soon</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Certified ML algorithm with high accuracy</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                </div>
+                                <div class="service-title">
+                                    <h4>Report will be emailed after survey</h4>
+                                </div>
+                            </div>
+                            <div class="service-detail">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+        <!-- Call To Action Start -->
+        <div class="call-to-action">
+            <div class="container text-center">
+                <div class="section-header">
+                    <h4>Call to action</h4>
+                    <h2>Call us</h2>
+                    <p>
+                       We are ready to help 24*7. Our virtual AI assistant will guide you more about our company providing B2B services to companies.
+                    </p>
+                </div>
+                <a class="btn" href="#"><i class="fas fa-phone-alt"></i>Click to Call</a>
+            </div>
+        </div>
+        <!-- Call To Action End -->
+
+        <!-- Portfolio Start -->
+        <div class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <h4>Creative</h4>
+                    <h2>Works</h2>
+                    <p>
+                        New age GenAI technology with advanced machine learning algorithms
+                    </p>
+                </div>
+
+    </body>
+</html>
